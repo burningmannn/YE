@@ -4,8 +4,16 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Coda.ttf</string>
 		<string>MuseoModerno.ttf</string>
+		<string>MuseoModerno-Thin.ttf</string>
+		<string>MuseoModerno-SemiBold.ttf</string>
+		<string>MuseoModerno-Regular.ttf</string>
+		<string>MuseoModerno-Medium.ttf</string>
+		<string>MuseoModerno-Light.ttf</string>
+		<string>MuseoModerno-ExtraLight.ttf</string>
+		<string>MuseoModerno-ExtraBold.ttf</string>
+		<string>MuseoModerno-Bold.ttf</string>
+		<string>MuseoModerno-Black.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
