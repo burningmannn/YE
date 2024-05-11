@@ -28,6 +28,7 @@
 		93D72C6A2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5D2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf */; };
 		93D72C6B2BEE9F4100C40BED /* MuseoModerno-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5E2BEE9F4100C40BED /* MuseoModerno-Thin.ttf */; };
 		93D72C6C2BEE9F4100C40BED /* MuseoModerno.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5F2BEE9F4100C40BED /* MuseoModerno.ttf */; };
+		93DE65752BEF96C500C3AB59 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */; };
 		93EDCFF02BEBE06500D25E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */; };
 		93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */; };
 		93EDCFF42BEBE06500D25E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFF32BEBE06500D25E91 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		93D72C5D2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-SemiBold.ttf"; sourceTree = "<group>"; };
 		93D72C5E2BEE9F4100C40BED /* MuseoModerno-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Thin.ttf"; sourceTree = "<group>"; };
 		93D72C5F2BEE9F4100C40BED /* MuseoModerno.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoModerno.ttf; sourceTree = "<group>"; };
+		93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		93EDCFEC2BEBE06500D25E91 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */,
+				93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D72BBF2BEE515200C40BED /* Song.swift in Sources */,
+				93DE65752BEF96C500C3AB59 /* MediaPlayer.swift in Sources */,
 				93EDCFF42BEBE06500D25E91 /* ViewController.swift in Sources */,
 				93EDCFF02BEBE06500D25E91 /* AppDelegate.swift in Sources */,
 				93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */,
