@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ViewController: UIViewController {
-
-    var player: AVAudioPlayer!
-    private let albums = Album.get()
+    
+    let albums = Album.get()
     
     private lazy var tableView: UITableView = {
         let v = UITableView()
@@ -27,12 +25,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "YE"
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "MuseoModerno", size: 16)!]
+        view.addSubview(tableView)
+        
         setupView()
     }
     
-    private func setupView() {
-        title = "YE"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "MuseoModerno", size: 16)!]
+    func setupView() {
         view.addSubview(tableView)
         
         setupConstraints()
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
@@ -60,5 +60,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.album = albums[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = MusicPlayerViewController(album: albums[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+        present(vc, animated: true, completion: nil)
     }
 }

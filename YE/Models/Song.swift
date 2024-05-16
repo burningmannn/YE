@@ -9,7 +9,7 @@ import Foundation
 
 struct Song {
     var name: String
-    var imageSong: String
+    var image: String
     var artist: String
     var favorite: Bool
     var fileName: String
