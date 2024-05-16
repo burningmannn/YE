@@ -16,24 +16,25 @@
 		93D72BBF2BEE515200C40BED /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BBE2BEE515200C40BED /* Song.swift */; };
 		93D72BC12BEE519300C40BED /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC02BEE519300C40BED /* Album.swift */; };
 		93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */; };
-		93D72C612BEE9F4100C40BED /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C532BEE9F4100C40BED /* OFL.txt */; };
-		93D72C622BEE9F4100C40BED /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C542BEE9F4100C40BED /* README.txt */; };
-		93D72C632BEE9F4100C40BED /* MuseoModerno-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C562BEE9F4100C40BED /* MuseoModerno-Black.ttf */; };
-		93D72C642BEE9F4100C40BED /* MuseoModerno-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C572BEE9F4100C40BED /* MuseoModerno-Bold.ttf */; };
-		93D72C652BEE9F4100C40BED /* MuseoModerno-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C582BEE9F4100C40BED /* MuseoModerno-ExtraBold.ttf */; };
-		93D72C662BEE9F4100C40BED /* MuseoModerno-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C592BEE9F4100C40BED /* MuseoModerno-ExtraLight.ttf */; };
-		93D72C672BEE9F4100C40BED /* MuseoModerno-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5A2BEE9F4100C40BED /* MuseoModerno-Light.ttf */; };
-		93D72C682BEE9F4100C40BED /* MuseoModerno-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5B2BEE9F4100C40BED /* MuseoModerno-Medium.ttf */; };
-		93D72C692BEE9F4100C40BED /* MuseoModerno-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5C2BEE9F4100C40BED /* MuseoModerno-Regular.ttf */; };
-		93D72C6A2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5D2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf */; };
-		93D72C6B2BEE9F4100C40BED /* MuseoModerno-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5E2BEE9F4100C40BED /* MuseoModerno-Thin.ttf */; };
-		93D72C6C2BEE9F4100C40BED /* MuseoModerno.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93D72C5F2BEE9F4100C40BED /* MuseoModerno.ttf */; };
 		93DE65752BEF96C500C3AB59 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */; };
 		93EDCFF02BEBE06500D25E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */; };
 		93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */; };
 		93EDCFF42BEBE06500D25E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFF32BEBE06500D25E91 /* ViewController.swift */; };
 		93EDCFF92BEBE06600D25E91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EDCFF82BEBE06600D25E91 /* Assets.xcassets */; };
 		93EDCFFC2BEBE06600D25E91 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93EDCFFB2BEBE06600D25E91 /* Base */; };
+		93EF2B472BF11EE200E16A17 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B392BF11EE200E16A17 /* OFL.txt */; };
+		93EF2B482BF11EE200E16A17 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B3A2BF11EE200E16A17 /* README.txt */; };
+		93EF2B492BF11EE200E16A17 /* MuseoModerno-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B3C2BF11EE200E16A17 /* MuseoModerno-Black.ttf */; };
+		93EF2B4A2BF11EE200E16A17 /* MuseoModerno-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B3D2BF11EE200E16A17 /* MuseoModerno-Bold.ttf */; };
+		93EF2B4B2BF11EE200E16A17 /* MuseoModerno-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B3E2BF11EE200E16A17 /* MuseoModerno-ExtraBold.ttf */; };
+		93EF2B4C2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B3F2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf */; };
+		93EF2B4D2BF11EE200E16A17 /* MuseoModerno-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B402BF11EE200E16A17 /* MuseoModerno-Light.ttf */; };
+		93EF2B4E2BF11EE200E16A17 /* MuseoModerno-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B412BF11EE200E16A17 /* MuseoModerno-Medium.ttf */; };
+		93EF2B4F2BF11EE200E16A17 /* MuseoModerno-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B422BF11EE200E16A17 /* MuseoModerno-Regular.ttf */; };
+		93EF2B502BF11EE200E16A17 /* MuseoModerno-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B432BF11EE200E16A17 /* MuseoModerno-SemiBold.ttf */; };
+		93EF2B512BF11EE200E16A17 /* MuseoModerno-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B442BF11EE200E16A17 /* MuseoModerno-Thin.ttf */; };
+		93EF2B522BF11EE200E16A17 /* MuseoModerno.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93EF2B452BF11EE200E16A17 /* MuseoModerno.ttf */; };
+		93EF2B542BF11FA100E16A17 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF2B532BF11FA100E16A17 /* MusicPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,18 +47,6 @@
 		93D72BBE2BEE515200C40BED /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		93D72BC02BEE519300C40BED /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		93D72C532BEE9F4100C40BED /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
-		93D72C542BEE9F4100C40BED /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		93D72C562BEE9F4100C40BED /* MuseoModerno-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Black.ttf"; sourceTree = "<group>"; };
-		93D72C572BEE9F4100C40BED /* MuseoModerno-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Bold.ttf"; sourceTree = "<group>"; };
-		93D72C582BEE9F4100C40BED /* MuseoModerno-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-ExtraBold.ttf"; sourceTree = "<group>"; };
-		93D72C592BEE9F4100C40BED /* MuseoModerno-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-ExtraLight.ttf"; sourceTree = "<group>"; };
-		93D72C5A2BEE9F4100C40BED /* MuseoModerno-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Light.ttf"; sourceTree = "<group>"; };
-		93D72C5B2BEE9F4100C40BED /* MuseoModerno-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Medium.ttf"; sourceTree = "<group>"; };
-		93D72C5C2BEE9F4100C40BED /* MuseoModerno-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Regular.ttf"; sourceTree = "<group>"; };
-		93D72C5D2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-SemiBold.ttf"; sourceTree = "<group>"; };
-		93D72C5E2BEE9F4100C40BED /* MuseoModerno-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Thin.ttf"; sourceTree = "<group>"; };
-		93D72C5F2BEE9F4100C40BED /* MuseoModerno.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoModerno.ttf; sourceTree = "<group>"; };
 		93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		93EDCFEC2BEBE06500D25E91 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +55,19 @@
 		93EDCFF82BEBE06600D25E91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93EDCFFB2BEBE06600D25E91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93EDCFFD2BEBE06600D25E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93EF2B392BF11EE200E16A17 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		93EF2B3A2BF11EE200E16A17 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		93EF2B3C2BF11EE200E16A17 /* MuseoModerno-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Black.ttf"; sourceTree = "<group>"; };
+		93EF2B3D2BF11EE200E16A17 /* MuseoModerno-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Bold.ttf"; sourceTree = "<group>"; };
+		93EF2B3E2BF11EE200E16A17 /* MuseoModerno-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-ExtraBold.ttf"; sourceTree = "<group>"; };
+		93EF2B3F2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-ExtraLight.ttf"; sourceTree = "<group>"; };
+		93EF2B402BF11EE200E16A17 /* MuseoModerno-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Light.ttf"; sourceTree = "<group>"; };
+		93EF2B412BF11EE200E16A17 /* MuseoModerno-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Medium.ttf"; sourceTree = "<group>"; };
+		93EF2B422BF11EE200E16A17 /* MuseoModerno-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Regular.ttf"; sourceTree = "<group>"; };
+		93EF2B432BF11EE200E16A17 /* MuseoModerno-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-SemiBold.ttf"; sourceTree = "<group>"; };
+		93EF2B442BF11EE200E16A17 /* MuseoModerno-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Thin.ttf"; sourceTree = "<group>"; };
+		93EF2B452BF11EE200E16A17 /* MuseoModerno.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoModerno.ttf; sourceTree = "<group>"; };
+		93EF2B532BF11FA100E16A17 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,34 +136,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		93D72C552BEE9F4100C40BED /* license */ = {
-			isa = PBXGroup;
-			children = (
-				93D72C532BEE9F4100C40BED /* OFL.txt */,
-				93D72C542BEE9F4100C40BED /* README.txt */,
-			);
-			path = license;
-			sourceTree = "<group>";
-		};
-		93D72C602BEE9F4100C40BED /* MuseoModerno */ = {
-			isa = PBXGroup;
-			children = (
-				93D72C552BEE9F4100C40BED /* license */,
-				93D72C562BEE9F4100C40BED /* MuseoModerno-Black.ttf */,
-				93D72C572BEE9F4100C40BED /* MuseoModerno-Bold.ttf */,
-				93D72C582BEE9F4100C40BED /* MuseoModerno-ExtraBold.ttf */,
-				93D72C592BEE9F4100C40BED /* MuseoModerno-ExtraLight.ttf */,
-				93D72C5A2BEE9F4100C40BED /* MuseoModerno-Light.ttf */,
-				93D72C5B2BEE9F4100C40BED /* MuseoModerno-Medium.ttf */,
-				93D72C5C2BEE9F4100C40BED /* MuseoModerno-Regular.ttf */,
-				93D72C5D2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf */,
-				93D72C5E2BEE9F4100C40BED /* MuseoModerno-Thin.ttf */,
-				93D72C5F2BEE9F4100C40BED /* MuseoModerno.ttf */,
-			);
-			name = MuseoModerno;
-			path = ../../../../Downloads/MuseoModerno;
-			sourceTree = "<group>";
-		};
 		93EDCFE32BEBE06400D25E91 = {
 			isa = PBXGroup;
 			children = (
@@ -181,12 +155,13 @@
 		93EDCFEE2BEBE06500D25E91 /* YE */ = {
 			isa = PBXGroup;
 			children = (
+				93EDD0032BEBE97E00D25E91 /* Fonts */,
+				930502BB2BEC4FB500256FEC /* Music */,
 				93D72BC22BEE5CB800C40BED /* Views */,
 				93D72BBD2BEE50E300C40BED /* Models */,
-				930502BB2BEC4FB500256FEC /* Music */,
-				93EDD0032BEBE97E00D25E91 /* Fonts */,
 				93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */,
 				93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */,
+				93EF2B532BF11FA100E16A17 /* MusicPlayerViewController.swift */,
 				93EDCFF32BEBE06500D25E91 /* ViewController.swift */,
 				93EDCFF82BEBE06600D25E91 /* Assets.xcassets */,
 				93EDCFFA2BEBE06600D25E91 /* LaunchScreen.storyboard */,
@@ -198,9 +173,36 @@
 		93EDD0032BEBE97E00D25E91 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				93D72C602BEE9F4100C40BED /* MuseoModerno */,
+				93EF2B462BF11EE200E16A17 /* MuseoModerno */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		93EF2B3B2BF11EE200E16A17 /* license */ = {
+			isa = PBXGroup;
+			children = (
+				93EF2B392BF11EE200E16A17 /* OFL.txt */,
+				93EF2B3A2BF11EE200E16A17 /* README.txt */,
+			);
+			path = license;
+			sourceTree = "<group>";
+		};
+		93EF2B462BF11EE200E16A17 /* MuseoModerno */ = {
+			isa = PBXGroup;
+			children = (
+				93EF2B3B2BF11EE200E16A17 /* license */,
+				93EF2B3C2BF11EE200E16A17 /* MuseoModerno-Black.ttf */,
+				93EF2B3D2BF11EE200E16A17 /* MuseoModerno-Bold.ttf */,
+				93EF2B3E2BF11EE200E16A17 /* MuseoModerno-ExtraBold.ttf */,
+				93EF2B3F2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf */,
+				93EF2B402BF11EE200E16A17 /* MuseoModerno-Light.ttf */,
+				93EF2B412BF11EE200E16A17 /* MuseoModerno-Medium.ttf */,
+				93EF2B422BF11EE200E16A17 /* MuseoModerno-Regular.ttf */,
+				93EF2B432BF11EE200E16A17 /* MuseoModerno-SemiBold.ttf */,
+				93EF2B442BF11EE200E16A17 /* MuseoModerno-Thin.ttf */,
+				93EF2B452BF11EE200E16A17 /* MuseoModerno.ttf */,
+			);
+			path = MuseoModerno;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,26 +263,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D72C642BEE9F4100C40BED /* MuseoModerno-Bold.ttf in Resources */,
+				93EF2B4A2BF11EE200E16A17 /* MuseoModerno-Bold.ttf in Resources */,
 				930502BD2BEC4FB500256FEC /* A Simple Feeling - Alge.mp3 in Resources */,
 				930502BE2BEC4FB500256FEC /* Illusions - Anno Domini Beats.mp3 in Resources */,
-				93D72C662BEE9F4100C40BED /* MuseoModerno-ExtraLight.ttf in Resources */,
-				93D72C6B2BEE9F4100C40BED /* MuseoModerno-Thin.ttf in Resources */,
-				93D72C692BEE9F4100C40BED /* MuseoModerno-Regular.ttf in Resources */,
+				93EF2B4C2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf in Resources */,
+				93EF2B512BF11EE200E16A17 /* MuseoModerno-Thin.ttf in Resources */,
+				93EF2B4F2BF11EE200E16A17 /* MuseoModerno-Regular.ttf in Resources */,
 				930502C12BEC4FB500256FEC /* Kalimba - Cxdy.mp3 in Resources */,
-				93D72C612BEE9F4100C40BED /* OFL.txt in Resources */,
-				93D72C622BEE9F4100C40BED /* README.txt in Resources */,
-				93D72C632BEE9F4100C40BED /* MuseoModerno-Black.ttf in Resources */,
+				93EF2B472BF11EE200E16A17 /* OFL.txt in Resources */,
+				93EF2B482BF11EE200E16A17 /* README.txt in Resources */,
+				93EF2B492BF11EE200E16A17 /* MuseoModerno-Black.ttf in Resources */,
 				93EDCFF92BEBE06600D25E91 /* Assets.xcassets in Resources */,
 				93EDCFFC2BEBE06600D25E91 /* Base in Resources */,
 				930502BC2BEC4FB500256FEC /* Body And Attitude - DJ Freedem.mp3 in Resources */,
-				93D72C6C2BEE9F4100C40BED /* MuseoModerno.ttf in Resources */,
-				93D72C672BEE9F4100C40BED /* MuseoModerno-Light.ttf in Resources */,
+				93EF2B522BF11EE200E16A17 /* MuseoModerno.ttf in Resources */,
+				93EF2B4D2BF11EE200E16A17 /* MuseoModerno-Light.ttf in Resources */,
 				930502C02BEC4FB500256FEC /* Feeling's Not Mutual - Single Friend.mp3 in Resources */,
 				930502BF2BEC4FB500256FEC /* Shadows - Anno Domini Beats.mp3 in Resources */,
-				93D72C682BEE9F4100C40BED /* MuseoModerno-Medium.ttf in Resources */,
-				93D72C6A2BEE9F4100C40BED /* MuseoModerno-SemiBold.ttf in Resources */,
-				93D72C652BEE9F4100C40BED /* MuseoModerno-ExtraBold.ttf in Resources */,
+				93EF2B4E2BF11EE200E16A17 /* MuseoModerno-Medium.ttf in Resources */,
+				93EF2B502BF11EE200E16A17 /* MuseoModerno-SemiBold.ttf in Resources */,
+				93EF2B4B2BF11EE200E16A17 /* MuseoModerno-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +300,7 @@
 				93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */,
 				93D72BC12BEE519300C40BED /* Album.swift in Sources */,
 				93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */,
+				93EF2B542BF11FA100E16A17 /* MusicPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
