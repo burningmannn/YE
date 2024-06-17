@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Songs</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@format@</string>
+		<key>format</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>треков</string>
+			<key>one</key>
+			<string>трек</string>
+			<key>two</key>
+			<string>трека</string>
+			<key>few</key>
+			<string>треков</string>
+			<key>many</key>
+			<string>треков</string>
+			<key>other</key>
+			<string>треков</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -13,7 +13,13 @@ final class AlbumTableViewCell: UITableViewCell {
             if let album = album {
                 albumCover.image = UIImage(named: album.image)
                 albumName.text = album.name
-                songsCount.text = "\(album.songs.count) songs"
+                //Don't limit text
+                albumName.adjustsFontSizeToFitWidth = true
+                albumName.minimumScaleFactor = 0.5
+                songsCount.text = "\(album.songs.count) \("Songs".localizedPlural(album.songs.count))"
+                //Don't limit text
+                songsCount.adjustsFontSizeToFitWidth = true
+                songsCount.minimumScaleFactor = 0.5
             }
         }
     }

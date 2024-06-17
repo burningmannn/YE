@@ -13,6 +13,9 @@
 		930502BF2BEC4FB500256FEC /* Shadows - Anno Domini Beats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 930502B62BEC4FB500256FEC /* Shadows - Anno Domini Beats.mp3 */; };
 		930502C02BEC4FB500256FEC /* Feeling's Not Mutual - Single Friend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 930502B82BEC4FB500256FEC /* Feeling's Not Mutual - Single Friend.mp3 */; };
 		930502C12BEC4FB500256FEC /* Kalimba - Cxdy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 930502B92BEC4FB500256FEC /* Kalimba - Cxdy.mp3 */; };
+		9356AA9E2C15D549007FF5EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9356AA9C2C15D549007FF5EE /* Localizable.strings */; };
+		9356AAA12C15D638007FF5EE /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356AAA02C15D638007FF5EE /* String+extension.swift */; };
+		9356AAA42C15D7C3007FF5EE /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 9356AAA22C15D7C3007FF5EE /* Localizable.stringsdict */; };
 		93D72BBF2BEE515200C40BED /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BBE2BEE515200C40BED /* Song.swift */; };
 		93D72BC12BEE519300C40BED /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC02BEE519300C40BED /* Album.swift */; };
 		93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */; };
@@ -44,6 +47,11 @@
 		930502B62BEC4FB500256FEC /* Shadows - Anno Domini Beats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shadows - Anno Domini Beats.mp3"; sourceTree = "<group>"; };
 		930502B82BEC4FB500256FEC /* Feeling's Not Mutual - Single Friend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Feeling's Not Mutual - Single Friend.mp3"; sourceTree = "<group>"; };
 		930502B92BEC4FB500256FEC /* Kalimba - Cxdy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kalimba - Cxdy.mp3"; sourceTree = "<group>"; };
+		9356AA9D2C15D549007FF5EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9356AA9F2C15D56F007FF5EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9356AAA02C15D638007FF5EE /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		9356AAA32C15D7C3007FF5EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		9356AAA52C15D7FC007FF5EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		93D72BBE2BEE515200C40BED /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		93D72BC02BEE519300C40BED /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,9 +171,12 @@
 				93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */,
 				93EF2B532BF11FA100E16A17 /* MusicPlayerViewController.swift */,
 				93EDCFF32BEBE06500D25E91 /* ViewController.swift */,
+				9356AAA22C15D7C3007FF5EE /* Localizable.stringsdict */,
+				9356AA9C2C15D549007FF5EE /* Localizable.strings */,
 				93EDCFF82BEBE06600D25E91 /* Assets.xcassets */,
 				93EDCFFA2BEBE06600D25E91 /* LaunchScreen.storyboard */,
 				93EDCFFD2BEBE06600D25E91 /* Info.plist */,
+				9356AAA02C15D638007FF5EE /* String+extension.swift */,
 			);
 			path = YE;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 93EDCFE32BEBE06400D25E91;
 			productRefGroup = 93EDCFED2BEBE06500D25E91 /* Products */;
@@ -266,6 +278,7 @@
 				93EF2B4A2BF11EE200E16A17 /* MuseoModerno-Bold.ttf in Resources */,
 				930502BD2BEC4FB500256FEC /* A Simple Feeling - Alge.mp3 in Resources */,
 				930502BE2BEC4FB500256FEC /* Illusions - Anno Domini Beats.mp3 in Resources */,
+				9356AAA42C15D7C3007FF5EE /* Localizable.stringsdict in Resources */,
 				93EF2B4C2BF11EE200E16A17 /* MuseoModerno-ExtraLight.ttf in Resources */,
 				93EF2B512BF11EE200E16A17 /* MuseoModerno-Thin.ttf in Resources */,
 				93EF2B4F2BF11EE200E16A17 /* MuseoModerno-Regular.ttf in Resources */,
@@ -273,6 +286,7 @@
 				93EF2B472BF11EE200E16A17 /* OFL.txt in Resources */,
 				93EF2B482BF11EE200E16A17 /* README.txt in Resources */,
 				93EF2B492BF11EE200E16A17 /* MuseoModerno-Black.ttf in Resources */,
+				9356AA9E2C15D549007FF5EE /* Localizable.strings in Resources */,
 				93EDCFF92BEBE06600D25E91 /* Assets.xcassets in Resources */,
 				93EDCFFC2BEBE06600D25E91 /* Base in Resources */,
 				930502BC2BEC4FB500256FEC /* Body And Attitude - DJ Freedem.mp3 in Resources */,
@@ -301,12 +315,31 @@
 				93D72BC12BEE519300C40BED /* Album.swift in Sources */,
 				93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */,
 				93EF2B542BF11FA100E16A17 /* MusicPlayerViewController.swift in Sources */,
+				9356AAA12C15D638007FF5EE /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9356AA9C2C15D549007FF5EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9356AA9D2C15D549007FF5EE /* en */,
+				9356AA9F2C15D56F007FF5EE /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9356AAA22C15D7C3007FF5EE /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9356AAA32C15D7C3007FF5EE /* en */,
+				9356AAA52C15D7FC007FF5EE /* ru */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
 		93EDCFFA2BEBE06600D25E91 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
