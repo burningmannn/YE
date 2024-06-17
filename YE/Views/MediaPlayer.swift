@@ -18,6 +18,9 @@ final class MediaPlayer: UIView {
         v.textColor = UIColor(named: "AccentColor")
         v.textAlignment = .center
         v.font = UIFont(name: "MuseoModerno-Bold", size: 32)
+        //Don't limit text
+        v.adjustsFontSizeToFitWidth = true
+        v.minimumScaleFactor = 0.5
         return v
     }()
     
@@ -45,6 +48,9 @@ final class MediaPlayer: UIView {
         //v.font = .systemFont(ofSize: 14, weight: .light)
         v.font = UIFont(name: "MuseoModerno-Medium", size: 14)
         v.text = "00:00"
+        //Don't limit text
+        v.adjustsFontSizeToFitWidth = true
+        v.minimumScaleFactor = 0.5
         return v
     }()
     
@@ -54,6 +60,9 @@ final class MediaPlayer: UIView {
         //v.font = .systemFont(ofSize: 14, weight: .light)
         v.font = UIFont(name: "MuseoModerno-Medium", size: 14)
         v.text = "00:00"
+        //Don't limit text
+        v.adjustsFontSizeToFitWidth = true
+        v.minimumScaleFactor = 0.5
         return v
     }()
     
@@ -62,6 +71,9 @@ final class MediaPlayer: UIView {
         v.translatesAutoresizingMaskIntoConstraints = false
         //v.font = .systemFont(ofSize: 16, weight: .bold)
         v.font = UIFont(name: "MuseoModerno-Medium", size: 16)
+        //Don't limit text
+        v.adjustsFontSizeToFitWidth = true
+        v.minimumScaleFactor = 0.5
         return v
     }()
     
@@ -70,6 +82,9 @@ final class MediaPlayer: UIView {
         v.translatesAutoresizingMaskIntoConstraints = false
         //v.font = .systemFont(ofSize: 16, weight: .light)
         v.font = UIFont(name: "MuseoModerno-Light", size: 16)
+        //Don't limit text
+        v.adjustsFontSizeToFitWidth = true
+        v.minimumScaleFactor = 0.5
         return v
     }()
     
@@ -125,7 +140,7 @@ final class MediaPlayer: UIView {
     
     private func setupView() {
         albumName.text = album.name
-        albumCover.image = UIImage(named: album.image)
+        albumCover.image = UIImage(named: album.songs[playingIndex].image)
         setupPlayer(song: album.songs[playingIndex])
         
         [albumName, songNameLabel, artistLabel, elapsedTimeLabel, remainingTimeLabel].forEach{ (v) in
@@ -206,6 +221,7 @@ final class MediaPlayer: UIView {
         
         songNameLabel.text = song.name
         artistLabel.text = song.artist
+        albumCover.image = UIImage(named: album.songs[playingIndex].image)
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
