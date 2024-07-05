@@ -16,9 +16,9 @@
 		9356AA9E2C15D549007FF5EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9356AA9C2C15D549007FF5EE /* Localizable.strings */; };
 		9356AAA12C15D638007FF5EE /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356AAA02C15D638007FF5EE /* String+extension.swift */; };
 		9356AAA42C15D7C3007FF5EE /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 9356AAA22C15D7C3007FF5EE /* Localizable.stringsdict */; };
+		9390492C2C380CF300A400E7 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390492B2C380CF300A400E7 /* AlbumTableViewCell.swift */; };
+		9390492E2C380D2200A400E7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390492D2C380D2200A400E7 /* Album.swift */; };
 		93D72BBF2BEE515200C40BED /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BBE2BEE515200C40BED /* Song.swift */; };
-		93D72BC12BEE519300C40BED /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC02BEE519300C40BED /* Album.swift */; };
-		93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */; };
 		93DE65752BEF96C500C3AB59 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */; };
 		93EDCFF02BEBE06500D25E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */; };
 		93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDCFF12BEBE06500D25E91 /* SceneDelegate.swift */; };
@@ -52,9 +52,9 @@
 		9356AAA02C15D638007FF5EE /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		9356AAA32C15D7C3007FF5EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		9356AAA52C15D7FC007FF5EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		9390492B2C380CF300A400E7 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		9390492D2C380D2200A400E7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		93D72BBE2BEE515200C40BED /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		93D72BC02BEE519300C40BED /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		93EDCFEC2BEBE06500D25E91 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EDCFEF2BEBE06500D25E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				93D72BBE2BEE515200C40BED /* Song.swift */,
-				93D72BC02BEE519300C40BED /* Album.swift */,
+				9390492D2C380D2200A400E7 /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		93D72BC22BEE5CB800C40BED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				93D72BC32BEE5CE100C40BED /* AlbumTableViewCell.swift */,
 				93DE65742BEF96C500C3AB59 /* MediaPlayer.swift */,
+				9390492B2C380CF300A400E7 /* AlbumTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					93EDCFEB2BEBE06500D25E91 = {
 						CreatedOnToolsVersion = 15.3;
@@ -312,10 +312,10 @@
 				93EDCFF42BEBE06500D25E91 /* ViewController.swift in Sources */,
 				93EDCFF02BEBE06500D25E91 /* AppDelegate.swift in Sources */,
 				93EDCFF22BEBE06500D25E91 /* SceneDelegate.swift in Sources */,
-				93D72BC12BEE519300C40BED /* Album.swift in Sources */,
-				93D72BC42BEE5CE100C40BED /* AlbumTableViewCell.swift in Sources */,
+				9390492C2C380CF300A400E7 /* AlbumTableViewCell.swift in Sources */,
 				93EF2B542BF11FA100E16A17 /* MusicPlayerViewController.swift in Sources */,
 				9356AAA12C15D638007FF5EE /* String+extension.swift in Sources */,
+				9390492E2C380D2200A400E7 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +356,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -419,6 +420,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

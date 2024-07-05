@@ -11,8 +11,14 @@ final class AlbumTableViewCell: UITableViewCell {
     var album: Album? {
         didSet {
             if let album = album {
+                //let url_image = URL(string: "https://www.iconninja.com/files/963/565/242/apple-blue-icon.png")!
+                
+                //let data = try! Data(contentsOf: url_image)
+                
+                //albumCover.image = UIImage(data: data)
+                
                 albumCover.image = UIImage(named: album.image)
-                albumName.text = album.name
+                albumName.text = album.name.localized // Добавил  .localized
                 //Don't limit text
                 albumName.adjustsFontSizeToFitWidth = true
                 albumName.minimumScaleFactor = 0.5

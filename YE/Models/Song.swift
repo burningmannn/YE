@@ -7,10 +7,12 @@
 
 import Foundation
 
-struct Song {
+struct Song: Decodable {
     var name: String
     var image: String
     var artist: String
     var favorite: Bool
     var fileName: String
+    var URL_image: String
+    var URL_music: String
 }
