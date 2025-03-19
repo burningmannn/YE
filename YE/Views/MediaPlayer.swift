@@ -34,6 +34,17 @@ final class MediaPlayer: UIView {
         return v
     }()
     
+    private lazy var nextAlbumCover: UIImageView = {
+        let v = UIImageView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.contentMode = .scaleAspectFill
+        v.clipsToBounds = true
+        v.layer.cornerRadius = 100
+        v.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        v.alpha = 0
+        return v
+    }()
+    
     private lazy var progressBar: UISlider = {
         let v = UISlider()
         v.thumbTintColor = .clear
@@ -125,8 +136,13 @@ final class MediaPlayer: UIView {
     }()
     
     private var player = AVAudioPlayer()
+    private var nextPlayer: AVAudioPlayer?
     private var timer: Timer?
     private var playingIndex = 0
+    private var crossfadeTimer: Timer?
+    private let crossfadeDuration: TimeInterval = 5.0
+    private var isAutomaticTransition = false
+    private var isCrossfadeScheduled = false
     
     init(album: Album) {
         self.album = album
@@ -147,7 +163,7 @@ final class MediaPlayer: UIView {
             v.textColor = UIColor(named: "SecondaryAccentColor")
         }
         
-        [albumName, albumCover, songNameLabel, artistLabel, progressBar, elapsedTimeLabel, remainingTimeLabel, controlStack].forEach{ (v) in
+        [albumName, albumCover, nextAlbumCover, songNameLabel, artistLabel, progressBar, elapsedTimeLabel, remainingTimeLabel, controlStack].forEach{ (v) in
             addSubview(v)
         }
         
@@ -168,6 +184,14 @@ final class MediaPlayer: UIView {
             albumCover.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             albumCover.topAnchor.constraint(equalTo: albumName.bottomAnchor, constant: 32),
             albumCover.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.5)
+        ])
+        
+        // next album cover
+        NSLayoutConstraint.activate([
+            nextAlbumCover.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            nextAlbumCover.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            nextAlbumCover.topAnchor.constraint(equalTo: albumName.bottomAnchor, constant: 32),
+            nextAlbumCover.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.5)
         ])
         
         // song name
@@ -215,8 +239,11 @@ final class MediaPlayer: UIView {
         guard let url = Bundle.main.url(forResource: song.fileName, withExtension: "mp3") else {
             return
         }
+        
+        isCrossfadeScheduled = false
+        
         if timer == nil {
-            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
         }
         
         songNameLabel.text = song.name
@@ -224,11 +251,18 @@ final class MediaPlayer: UIView {
         albumCover.image = UIImage(named: album.songs[playingIndex].image)
         
         do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player.delegate = self
-            player.prepareToPlay()
-            try AVAudioSession.sharedInstance().setCategory(.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
+            if nextPlayer == nil {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.delegate = self
+                player.prepareToPlay()
+                try AVAudioSession.sharedInstance().setCategory(.playback)
+                try AVAudioSession.sharedInstance().setActive(true)
+            } else {
+                nextPlayer = try AVAudioPlayer(contentsOf: url)
+                nextPlayer?.delegate = self
+                nextPlayer?.prepareToPlay()
+                nextPlayer?.volume = 0
+            }
         } catch let error {
             print(error.localizedDescription)
         }
@@ -243,8 +277,13 @@ final class MediaPlayer: UIView {
     
     func stop() {
         player.stop()
+        nextPlayer?.stop()
         timer?.invalidate()
         timer = nil
+        crossfadeTimer?.invalidate()
+        crossfadeTimer = nil
+        isAutomaticTransition = false
+        isCrossfadeScheduled = false
     }
     
     private func setPlayPauseIcon(isPlaying: Bool) {
@@ -257,6 +296,95 @@ final class MediaPlayer: UIView {
         elapsedTimeLabel.text = getFormattedTime(timeInterval: player.currentTime)
         let remainingTime = player.duration - player.currentTime
         remainingTimeLabel.text = getFormattedTime(timeInterval: remainingTime)
+        
+        // Check if we need to start crossfade
+        if remainingTime <= crossfadeDuration && !isCrossfadeScheduled && !isAutomaticTransition {
+            isCrossfadeScheduled = true
+            prepareNextTrack()
+        }
+    }
+    
+    private func prepareNextTrack() {
+        let nextIndex = (playingIndex + 1) >= album.songs.count ? 0 : playingIndex + 1
+        
+        guard let url = Bundle.main.url(forResource: album.songs[nextIndex].fileName, withExtension: "mp3") else {
+            return
+        }
+        
+        // Set up next album cover
+        nextAlbumCover.image = UIImage(named: album.songs[nextIndex].image)
+        nextAlbumCover.alpha = 0
+        
+        do {
+            nextPlayer = try AVAudioPlayer(contentsOf: url)
+            nextPlayer?.delegate = self
+            nextPlayer?.volume = 0.0
+            nextPlayer?.prepareToPlay()
+            startCrossfade()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func startCrossfade() {
+        guard let nextPlayer = nextPlayer else { return }
+        
+        isAutomaticTransition = true
+        nextPlayer.play()
+        
+        // Calculate the number of steps for smooth crossfade
+        let steps = 50
+        let volumeStep = 1.0 / Float(steps)
+        let timeStep = crossfadeDuration / Double(steps)
+        
+        var currentStep = 0
+        
+        crossfadeTimer?.invalidate()
+        crossfadeTimer = Timer.scheduledTimer(withTimeInterval: timeStep, repeats: true) { [weak self] timer in
+            guard let self = self else {
+                timer.invalidate()
+                return
+            }
+            
+            currentStep += 1
+            
+            // Fade out current track and cover
+            self.player.volume = 1.0 - (Float(currentStep) * volumeStep)
+            self.albumCover.alpha = CGFloat(1.0 - (Float(currentStep) * volumeStep))
+            
+            // Fade in next track and cover
+            nextPlayer.volume = Float(currentStep) * volumeStep
+            self.nextAlbumCover.alpha = CGFloat(Float(currentStep) * volumeStep)
+            
+            if currentStep >= steps {
+                timer.invalidate()
+                self.crossfadeTimer = nil
+                
+                // Stop current player
+                self.player.stop()
+                
+                // Set up next track as current
+                self.player = nextPlayer
+                self.nextPlayer = nil
+                self.playingIndex = (self.playingIndex + 1) >= self.album.songs.count ? 0 : self.playingIndex + 1
+                
+                // Update UI
+                self.songNameLabel.text = self.album.songs[self.playingIndex].name
+                self.artistLabel.text = self.album.songs[self.playingIndex].artist
+                
+                // Swap album covers
+                self.albumCover.image = self.nextAlbumCover.image
+                self.albumCover.alpha = 1.0
+                self.nextAlbumCover.alpha = 0
+                
+                // Reset progress bar for new track
+                self.progressBar.value = Float(self.crossfadeDuration)
+                self.progressBar.maximumValue = Float(self.player.duration)
+                
+                self.isAutomaticTransition = false
+                self.isCrossfadeScheduled = false
+            }
+        }
     }
     
     @objc private func progressScrubbed(_ sender: UISlider) {
@@ -264,11 +392,21 @@ final class MediaPlayer: UIView {
     }
     
     @objc private func didTapPrevious(_ sender: UIButton) {
+        isAutomaticTransition = false
+        isCrossfadeScheduled = false
+        crossfadeTimer?.invalidate()
+        crossfadeTimer = nil
+        nextPlayer?.stop()
+        nextPlayer = nil
+        
         playingIndex -= 1
         if playingIndex < 0 {
             playingIndex = album.songs.count - 1
         }
         setupPlayer(song: album.songs[playingIndex])
+        albumCover.image = UIImage(named: album.songs[playingIndex].image)
+        albumCover.alpha = 1.0
+        nextAlbumCover.alpha = 0
         play()
         setPlayPauseIcon(isPlaying: player.isPlaying)
     }
@@ -283,11 +421,21 @@ final class MediaPlayer: UIView {
     }
     
     @objc private func didTapNext(_ sender: UIButton) {
+        isAutomaticTransition = false
+        isCrossfadeScheduled = false
+        crossfadeTimer?.invalidate()
+        crossfadeTimer = nil
+        nextPlayer?.stop()
+        nextPlayer = nil
+        
         playingIndex += 1
         if playingIndex >= album.songs.count {
             playingIndex = 0
         }
         setupPlayer(song: album.songs[playingIndex])
+        albumCover.image = UIImage(named: album.songs[playingIndex].image)
+        albumCover.alpha = 1.0
+        nextAlbumCover.alpha = 0
         play()
         setPlayPauseIcon(isPlaying: player.isPlaying)
     }
@@ -309,6 +457,8 @@ final class MediaPlayer: UIView {
 
 extension MediaPlayer: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        didTapNext(nextButton)
+        if flag && player == self.player && !isCrossfadeScheduled {
+            didTapNext(nextButton)
+        }
     }
 }
